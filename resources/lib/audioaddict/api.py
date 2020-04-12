@@ -26,6 +26,7 @@ class AudioAddictApi(object):
             if channel['key'] in listen_channel_keys:
                 channels.append(Channel(channel))
 
+        channels.sort(key=lambda c: c.name)
         return channels
 
     def channel_by_key(self, key):
