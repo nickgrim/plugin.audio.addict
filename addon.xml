@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.audio.addict" name="AudioAddict" version="0.6.1" provider-name="Samuel Sapalski (@leas)">
+<addon id="plugin.audio.addict" name="AudioAddict" version="0.6.2" provider-name="Samuel Sapalski (@leas) / nickgrim">
     <requires>
         <!-- Isengard 15.x -->
         <import addon="xbmc.python" version="2.20.0"/>
@@ -15,6 +15,6 @@
         <description lang="en">The AudioAddict network provides a wide range of specialized radio stations, ranging from electronic music to classical tunes.[CR][CR]Supported radio networks:[CR]  DigitallyImported[CR]  RadioTunes[CR]  RockRadio[CR]  JazzRadio[CR]  ClassicalRadio[CR][CR]You'll need a premium account at one of the listed networks to use this addon and listen to the radio stations.</description>
         <forum>https://forum.kodi.tv/showthread.php?tid=317155</forum>
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-        <source>https://github.com/ssapalski/plugin.audio.addict</source>
+        <source>https://github.com/nickgrim/plugin.audio.addict</source>
     </extension>
 </addon>
