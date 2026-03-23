@@ -12,10 +12,10 @@ class AudioAddictApi(object):
         self._base_url = "api.audioaddict.com/v1/%s" % network_key
 
     def channels(self):
-        r1 = requests.get("http://%s/channels" % self._base_url)
+        r1 = requests.get("https://%s/channels" % self._base_url)
         r1.raise_for_status()
 
-        r2 = requests.get("http://%s/listen/channels" % self._base_url)
+        r2 = requests.get("https://%s/listen/channels" % self._base_url)
         r2.raise_for_status()
 
         all_channels = r1.json()
@@ -30,7 +30,7 @@ class AudioAddictApi(object):
         return channels
 
     def channel_by_key(self, key):
-        r = requests.get("http://%s/channels/key/%s" % (self._base_url, key))
+        r = requests.get("https://%s/channels/key/%s" % (self._base_url, key))
         r.raise_for_status()
 
         return Channel(r.json())
@@ -52,7 +52,7 @@ class Channel(object):
         self._channel = parsed_json
 
     def image_default(self):
-        url = "http:%s" % self._channel['images']['default']
+        url = "https:%s" % self._channel['images']['default']
         url = url.split('{')[0]
 
         return url
