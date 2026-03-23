@@ -59,8 +59,12 @@ def create_list_item(channel):
                                  thumbnailImage=image_url,
                                  iconImage=image_url)
 
-    date, time = channel.creation_timestamp.split('T')
-    timestamp = "%s %s" % (date, time.split('-')[0])
+    creation_timestamp = channel.creation_timestamp
+    if 'T' in creation_timestamp:
+        date, time = creation_timestamp.split('T')
+        timestamp = "%s %s" % (date, time.split('-')[0])
+    else:
+        timestamp = "2026-03-23 00:00:00"  # Fallback
 
     list_item.setProperty('isPlayable', 'true')
     list_item.setInfo('video', {'dateadded': timestamp})
